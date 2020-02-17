@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+// import Checkboxinput from './components/Checkboxinput'
 import RadiosPanel from './components/RadiosPanel'
 import Header from './components/Header'
 
@@ -21,6 +22,7 @@ function App() {
             name='rarity'
             value={["common", "uncommon", "rare", "epic"]}
             />
+
            <RadiosPanel
               containerClass = "setups__type"
               id={[4,5,6,7]}
@@ -28,6 +30,7 @@ function App() {
               name='type'
               value={["weapon", "armor", "utylity", "trash"]}
             />
+            {/* <Checkboxinput></Checkboxinput> */}
         <div id="setups__general">
         </div>
       </div>
