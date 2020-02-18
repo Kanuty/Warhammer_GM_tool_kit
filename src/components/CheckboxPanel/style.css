@@ -1,0 +1,47 @@
+.panelBox {
+  display:flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 3px;
+  padding: 3px;
+}
+
+.checkBox {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkBox label {
+  color: red;
+}
+
+.sliderBox {
+  display: flex;
+  margin: 5px;
+  width: 90%;
+  height: 1rem;
+  margin: 3px;
+  padding: 3px;
+
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  width: 100%; /* Full-width */
+  height: 7px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #333; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

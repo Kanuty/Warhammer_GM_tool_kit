@@ -17,42 +17,42 @@ const RadiosPanel = (props) => {
 
 return (
   <div id={containerClass}>
-    <div class={inputClass} >
+    <div className={inputClass} >
       <input 
         type={type}
         name={name}
         id={id[0]}
         value={value[0]}
-        checked
+        defaultChecked
       />
-      <label class="1">{value[0]}</label>
+      <label className="1">{value[0]}</label>
     </div>
-    <div class={inputClass} >
+    <div className={inputClass} >
       <input 
         type={type}
         name={name}
         id={id[1]}
         value={value[1]}
       />
-      <label class="1">{value[1]}</label>
+      <label className="1">{value[1]}</label>
     </div>
-    <div class={inputClass} >
+    <div className={inputClass} >
       <input
         type={type}
         name={name}
         id={id[2]}
         value={value[2]}
       />
-      <label class="1">{value[2]}</label>
+      <label className="1">{value[2]}</label>
     </div>
-    <div class={inputClass} >
+    <div className={inputClass} >
       <input
       type={type}
       name={name}
       id={id[3]}
       value={value[3]}
     />
-      <label class="1">{value[3]}</label>
+      <label className="1">{value[3]}</label>
     </div>
   </div>
   )
@@ -60,7 +60,7 @@ return (
 
 RadiosPanel.propTypes = {
   containerClass: PropTypes.string,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.arrayOf(PropTypes.number).isRequired,
   inputClass: PropTypes.string,
   name: PropTypes.string.isRequired,
   type: PropTypes.string,
