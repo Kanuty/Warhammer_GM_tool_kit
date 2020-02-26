@@ -17,8 +17,7 @@ const OriginElement = (props) => {
           <input
             type="checkbox"
             id={party}
-            name={party}
-            
+            name={party} 
           />
           <label htmlFor={party}>
             <img src={logo}></img>
