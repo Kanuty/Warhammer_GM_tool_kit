@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import chaotic from '../../img/symbols/chaotic.png'
+import standard from '../../img/symbols/default.png'
 
 import './style.css';
 
@@ -9,7 +9,10 @@ const OriginElement = (props) => {
     party,
   } = props;
 
-  const [chance, setTitle] = useState('50')
+  const [chance, setPercentage] = useState('50')
+
+  const [isActive, setisActive] = useState(false);
+  const toggleIsActive = () => setisActive(!isActive);
 
   return (
       <div className="checkBox">
@@ -18,13 +21,17 @@ const OriginElement = (props) => {
             type="checkbox"
             id={party}
             name={party}
-            
+            onClick={toggleIsActive} 
           />
           <label htmlFor={party}>
             <img src={logo}></img>
           </label>
             <div className="sliderBox">
-              <p>{party} {chance} %</p>
+              {isActive?
+              <p className="activeParagraph"> {party} chance * {chance}</p>
+              :
+              <p> {party} innactive</p>
+              }
               <input
                 type="range"
                 className="slider"
@@ -32,7 +39,7 @@ const OriginElement = (props) => {
                 max="100"
                 id={`${party}slider`}
                 name={party}
-                onChange={event => setTitle(event.target.value)}
+                onChange={event => setPercentage(event.target.value)}
               />
             </div>
         </div>
@@ -41,10 +48,8 @@ const OriginElement = (props) => {
 };
 
 OriginElement.defaultProps = {
-  logo: chaotic,
-  party: "Chaos"
+  logo: standard,
+  party: "default"
 };
-
-
 
 export default (OriginElement);

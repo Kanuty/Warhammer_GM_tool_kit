@@ -1,24 +1,5 @@
-
-
-.panelBox {
-  background-color: #555;
-  border: 1px solid #999;
-  border-radius: 15px;
-  display:flex;
-  flex-direction: column;
-  width: 30rem;
-  margin: 3px;
-  padding: 5px;
-  text-shadow: none;
-}
-
-.panelBox h2{
-  background-color: #666;
-  border-radius: 10px;
-  box-shadow: 0px 2px 2px #333;
-  margin-bottom:5px;
-  padding: 2px;
-  width: 100%;
+.activeParagraph {
+  background-color: #888;
 }
 
 .checkBox {
@@ -52,14 +33,14 @@
 }
 
 .labelBox input[type=checkbox]:checked + label {
-  background-color:  rgba(176, 239, 44, 0.5);
-  box-shadow: 0px 0px 10px rgba(176, 239, 44, 0.5);
+  background-color:  #888;
+  box-shadow: 0px -4px 2px #333;
 }
 
 .labelBox label img {
-  height: 70px;
+  height: 60px;
   margin: 10px;
-  width: 70px;
+  width: 60px;
 }
 
 .sliderBox {
@@ -95,11 +76,11 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 15px;
+  width: 13px;
   height: 35px; 
-  background: #333; 
-  border-radius: 5px;
-  border: 2px solid #aaa;
+  background: #444; 
+  border-radius: 3px;
+  border: 1px solid #aaa;
   box-shadow: 2px 2px 5px #333333;
   cursor: pointer; 
 }
