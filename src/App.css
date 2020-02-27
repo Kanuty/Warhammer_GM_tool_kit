@@ -35,10 +35,9 @@ body {
     body footer a {
       color: #fff; }
 
-button {
+/* button {
   background: linear-gradient(0deg, #503e31 0%, #968e87 12%, #f7eadd 94%, #5d554c 100%);
   color: #f4c20d;
-  /*font-family: 'Special Elite', cursive;*/
   font-weight: bold;
   text-decoration: underline;
   text-shadow: #222 2px 3px 3px;
@@ -48,7 +47,7 @@ button {
   margin: 4px;
   border-radius: 5vh;
   border: #333 solid 1px;
-  box-shadow: #111 4px 4px  7px; }
+  box-shadow: #111 4px 4px  7px; } */
 
 .rarity, .type {
   color: #EEE;
@@ -201,7 +200,7 @@ background: linear-gradient(0deg, rgba(23,38,22,1) 0%, rgba(183,191,207,1) 94%, 
     font-size: 30px;
     height: 8vh;
     width: 75%; } }
-@media screen and (min-width: 0px) and (max-width: 1024px) and (orientation: landscape) {
+/* @media screen and (min-width: 0px) and (max-width: 1024px) and (orientation: landscape) {
   button {
-    font-size: 20px; } }
+    font-size: 20px; } } */
 
