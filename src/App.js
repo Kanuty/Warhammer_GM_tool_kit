@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import CheckboxPanel from './components/CheckboxPanel';
+import OriginPanel from './components/OriginPanel';
+import QualityPanel from './components/QualityPanel';
 import RadiosPanel from './components/RadiosPanel';
 import Header from './components/Header';
 
@@ -17,11 +18,7 @@ function App() {
           </div>
         <button onClick="res()">NEW RESULT</button>
         <div id="viev-container__setups">
-          <RadiosPanel
-            id={[0,1,2,3]}
-            name='rarity'
-            value={["common", "uncommon", "rare", "epic"]}
-            />
+          <QualityPanel/>
            <RadiosPanel
               containerClass = "setups__type"
               id={[4,5,6,7]}
@@ -29,9 +26,9 @@ function App() {
               name='type'
               value={["weapon", "armor", "utylity", "trash"]}
             />
-            <CheckboxPanel></CheckboxPanel>
-        <div id="setups__general">
-        </div>
+            <OriginPanel/>
+        {/* <div id="setups__general">
+        </div> */}
       </div>
       </div>
       <div className="main__aside-right"/>

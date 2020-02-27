@@ -1,0 +1,35 @@
+/* 
+
+.panelBox {
+  background-color: #555;
+  border: 1px solid #999;
+  border-radius: 15px;
+  display:flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 3px;
+  padding: 5px;
+  text-shadow: none;
+}
+
+.panelBox h1{
+  background-color: #666;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px #333;
+  margin-bottom:5px;
+  padding: 2px;
+  width: 100%;
+}
+
+.toggleButton{
+  -webkit-appearance: none;
+  border: 1px solid #aaa;
+  background-color: #666;
+  box-shadow: 2px 2px 5px #333333;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 5px;
+  width: 100%;
+} */
+
