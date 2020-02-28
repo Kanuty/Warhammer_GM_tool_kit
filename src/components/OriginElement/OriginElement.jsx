@@ -9,7 +9,7 @@ const OriginElement = (props) => {
     party,
   } = props;
 
-  const [chance, setPercentage] = useState('50')
+  const [chance, setPercentage] = useState('5')
 
   const [isActive, setisActive] = useState(false);
   const toggleIsActive = () => setisActive(!isActive);
@@ -28,17 +28,18 @@ const OriginElement = (props) => {
           </label>
             <div className="sliderBox">
               {isActive?
-              <p className="activeParagraph"> {party} chance * {chance}</p>
+              <p className="activeParagraph"> <i>{party}</i> chance multiplayer <b>x{chance}</b></p>
               :
-              <p> {party} innactive</p>
+              <p> <i>{party}</i> innactive</p>
               }
               <input
                 type="range"
                 className="slider"
                 min="1"
-                max="100"
+                max="10"
                 id={`${party}slider`}
                 name={party}
+                value={chance}
                 onChange={event => setPercentage(event.target.value)}
               />
             </div>
