@@ -4,6 +4,7 @@ import OriginPanel from './components/OriginPanel';
 import QualityPanel from './components/QualityPanel';
 import ItemsPanel from './components/ItemsPanel';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -26,13 +27,14 @@ function App() {
           NEW RESULT
         </button>
         <div id="viev-container__setups">
-          <QualityPanel/>
-          <ItemsPanel/>
-          <OriginPanel/>
+          <QualityPanel />
+          <ItemsPanel />
+          <OriginPanel />
         </div>
         </div>
         <div className="main__aside-right"/>
       </div>
+      <Footer />
     </div>
   );
 }

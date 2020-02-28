@@ -1,5 +1,5 @@
 .panelBox {
-  background-color: #555;
+  background-color: var(--deep-dark-color);
   border: 1px solid var(--highlight-color);
   border-radius: 15px;
   display:flex;
