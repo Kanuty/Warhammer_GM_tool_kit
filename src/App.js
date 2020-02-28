@@ -3,7 +3,6 @@ import './App.css';
 import OriginPanel from './components/OriginPanel';
 import QualityPanel from './components/QualityPanel';
 import ItemsPanel from './components/ItemsPanel';
-// import RadiosPanel from './components/RadiosPanel';
 import Header from './components/Header';
 
 function App() {
@@ -20,16 +19,19 @@ function App() {
             <div id="shows__viev"/>
             <div id="shows__nation"/>
           </div>
-        <button onClick={res}>NEW RESULT</button>
+        <button
+          className="neutralButton"
+          onClick={res}
+        >
+          NEW RESULT
+        </button>
         <div id="viev-container__setups">
           <QualityPanel/>
           <ItemsPanel/>
           <OriginPanel/>
-        {/* <div id="setups__general">
-        </div> */}
-      </div>
-      </div>
-      <div className="main__aside-right"/>
+        </div>
+        </div>
+        <div className="main__aside-right"/>
       </div>
     </div>
   );

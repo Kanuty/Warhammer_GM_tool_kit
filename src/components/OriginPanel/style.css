@@ -10,9 +10,9 @@
   text-shadow: none;
 }
 
-.panelBox h1{
+.panelBox h1 {
   background-color: var(--light-color);
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid var(--strong-highlight-color);
   box-shadow: 0px 2px 2px var(--shadow-color);
   margin-bottom:5px;
@@ -21,17 +21,48 @@
   width: 99%;
 }
 
-.toggleButton{
+.toggleButton {
   -webkit-appearance: none;
   border: 1px solid var(--strong-highlight-color);
   background-color: var(--dark-color);
   box-shadow: 2px 2px 5px var(--shadow-color);
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 24px;
-  font-family: 'Special Elite', cursive;
-  padding: 5px;
+  font-family: 'Georgia', serif;
   margin: 2px;
+  padding: 5px;
+  transition: background-color 0.1s;
   width: 100%;
 }
+
+.toggleButton:active {
+  background-color: var(--main-color);
+}
+
+@media screen and (min-width: 0px) and (max-width: 736px){
+  .panelBox {
+    margin: 1px;
+    padding: 3px;
+  }
+  
+  .panelBox h1 {
+    box-shadow: 1px 1px 1px var(--shadow-color);
+    font-size: 25px;
+    margin-bottom: 1px;
+    padding: 1px;
+    margin: 0px;
+  }
+  
+  .toggleButton {
+    box-shadow: 1px 1px 1px var(--shadow-color);
+    font-size: 18px;
+    margin: 1px;
+    padding: 2px;
+  }
+}
+
+/* @media screen and (min-width: 737px) and (max-width: 1366px){
+
+} */
 

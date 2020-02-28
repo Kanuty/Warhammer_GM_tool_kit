@@ -30,7 +30,7 @@ const OriginElement = (props) => {
               {isActive?
               <p className="activeParagraph"> <i>{party}</i> chance multiplayer <b>x{chance}</b></p>
               :
-              <p> <i>{party}</i> innactive</p>
+              <p> <i>{party}</i> inactive</p>
               }
               <input
                 type="range"

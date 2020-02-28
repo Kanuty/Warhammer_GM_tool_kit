@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
 
 import WarhammerLogo from '../../img/WarhammerLogo.png'
-import styles from './styles.js';
+import './style.css';
 
 const Header = (props) => {
   const {
@@ -32,4 +31,4 @@ Header.defaultProps = {
   text: 'Warhammer GM tool kit',
 };
 
-export default withStyles(styles)(Header);
+export default (Header);
