@@ -39,7 +39,9 @@ const OriginPanel = (props) => {
   const toggleHumanKingdomsDisplay = () => setHumanKingdomsDisplay(!humanKingdomsDisplay);
   const toggleOthersDisplay = () => setOtherDisplay(!othersDisplay);
 
-  // To do: When at least one OriginElement is acrive, than toggle button change collor.
+  // To do: When at least one OriginElement is active, than toggle button change collor.
+
+
 
   return (
     <div className="panelBox">

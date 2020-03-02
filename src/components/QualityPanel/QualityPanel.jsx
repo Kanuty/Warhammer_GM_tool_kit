@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { componentDidMount, useEffect, useState  } from 'react';
 import OriginElement from '../OriginElement';
 
 import './style.css';
@@ -11,9 +11,24 @@ const OriginPanel = (props) => {
   const [itemsDisplay, setItemsDisplay] = useState(true);
   const toggleItemsDisplay = () => setItemsDisplay(!itemsDisplay);
 
+  const [valueOfAwfull , setValueOfAwfull] = useState(0);
+  const [valueOfNormal , setValueOfNormal] = useState(0);
+  const [valueOfExceptionall , setValueOfExceptionall] = useState(0);
+  const [valueOfPerfect , setValueOfPerfect] = useState(0);
+
+  function handleChange () {
+    props.onChange([
+      valueOfAwfull,
+      valueOfNormal,
+      valueOfExceptionall,
+      valueOfPerfect])
+  }
+
+  useEffect( () => {handleChange()}, [valueOfAwfull, valueOfNormal, valueOfExceptionall, valueOfPerfect]) 
+  
   return (
     <div className="panelBox">
-      <h1>Quality</h1>
+      <h1>Quality of Awfull</h1>
       <button 
           className="toggleButton" 
           onClick={toggleItemsDisplay}>
@@ -21,10 +36,10 @@ const OriginPanel = (props) => {
       </button>
       { itemsDisplay?
           <div>
-            <OriginElement  party="awfull"/>
-            <OriginElement  party="normal"/>
-            <OriginElement  party="exceptionall"/>
-            <OriginElement  party="perfect"/>
+            <OriginElement  party="awfull" onChange={setValueOfAwfull}/>
+            <OriginElement  party="normal" onChange={setValueOfNormal}/>
+            <OriginElement  party="exceptionall" onChange={setValueOfExceptionall}/>
+            <OriginElement  party="perfect" onChange={setValueOfPerfect}/>
           </div>
         :
         <div/>

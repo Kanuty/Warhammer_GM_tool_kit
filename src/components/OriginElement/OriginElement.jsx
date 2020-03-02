@@ -5,14 +5,27 @@ import './style.css';
 
 const OriginElement = (props) => {
   const {
+    initialValue,
     logo,
     party,
   } = props;
 
-  const [chance, setPercentage] = useState('5')
+  const [chance, setPercentage] = useState(initialValue)
+  const [isActive, setIsActive] = useState(false);
 
-  const [isActive, setisActive] = useState(false);
-  const toggleIsActive = () => setisActive(!isActive);
+  function changeInValue(event) {
+    setPercentage(event.target.value)
+    if (isActive === true)
+    {props.onChange(event.target.value)}
+    else {props.onChange(0)};
+  }
+
+  function changeInActive() {
+    setIsActive(!isActive)
+    if (isActive === false)
+    {props.onChange(chance)}
+    else {props.onChange(0)}
+  }
 
   return (
       <div className="checkBox">
@@ -21,7 +34,7 @@ const OriginElement = (props) => {
             type="checkbox"
             id={party}
             name={party}
-            onClick={toggleIsActive} 
+            onClick={changeInActive} 
           />
           <label htmlFor={party}>
             <img src={logo}></img>
@@ -30,7 +43,7 @@ const OriginElement = (props) => {
               {isActive?
               <p className="activeParagraph"> <i>{party}</i> chance multiplayer <b>x{chance}</b></p>
               :
-              <p> <i>{party}</i> inactive</p>
+              <p> <i>{party} is innactive</i></p>
               }
               <input
                 type="range"
@@ -40,7 +53,7 @@ const OriginElement = (props) => {
                 id={`${party}slider`}
                 name={party}
                 value={chance}
-                onChange={event => setPercentage(event.target.value)}
+                onChange={changeInValue}
               />
             </div>
         </div>
@@ -49,8 +62,9 @@ const OriginElement = (props) => {
 };
 
 OriginElement.defaultProps = {
+  initialValue: 5,
   logo: standard,
-  party: "default"
+  party: "default",
 };
 
 export default (OriginElement);
