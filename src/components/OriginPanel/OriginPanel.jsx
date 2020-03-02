@@ -27,12 +27,12 @@ import chaosDwarfs from '../../img/symbols/chaosDwarfs.png'
 
 import './style.css';
 
-const CheckboxPanel = (props) => {
+const OriginPanel = (props) => {
   const {
 
   } = props;
 
-  const [chaosDisplay, setChaosDisplay] = useState(false);
+  const [chaosDisplay, setChaosDisplay] = useState(true);
   const [humanKingdomsDisplay, setHumanKingdomsDisplay] = useState(false);
   const [othersDisplay, setOtherDisplay] = useState(false);
   const toggleChaosDisplay = () => setChaosDisplay(!chaosDisplay);
@@ -100,6 +100,7 @@ const CheckboxPanel = (props) => {
             <OriginElement logo={naggarond} party="Naggarond"/>
             <OriginElement logo={ogres} party="Mountains of Mourn"/>
             <OriginElement party="Eastern Steppes"/>
+            <OriginElement party="Albion"/>
           </div>
         :
           <div/> }
@@ -107,4 +108,4 @@ const CheckboxPanel = (props) => {
   )
 };
 
-export default (CheckboxPanel);
+export default (OriginPanel);

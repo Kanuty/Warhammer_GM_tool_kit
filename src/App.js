@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.css';
-import CheckboxPanel from './components/CheckboxPanel';
-import RadiosPanel from './components/RadiosPanel';
+import OriginPanel from './components/OriginPanel';
+import QualityPanel from './components/QualityPanel';
+import ItemsPanel from './components/ItemsPanel';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
+
+  const res = () => console.log(1+1)
+
   return (
     <div className="App">
       <Header />
@@ -15,27 +20,21 @@ function App() {
             <div id="shows__viev"/>
             <div id="shows__nation"/>
           </div>
-        <button onClick="res()">NEW RESULT</button>
+        <button
+          className="neutralButton"
+          onClick={res}
+        >
+          NEW RESULT
+        </button>
         <div id="viev-container__setups">
-          <RadiosPanel
-            id={[0,1,2,3]}
-            name='rarity'
-            value={["common", "uncommon", "rare", "epic"]}
-            />
-           <RadiosPanel
-              containerClass = "setups__type"
-              id={[4,5,6,7]}
-              inputClass =  "type"
-              name='type'
-              value={["weapon", "armor", "utylity", "trash"]}
-            />
-            <CheckboxPanel></CheckboxPanel>
-        <div id="setups__general">
+          <QualityPanel />
+          <ItemsPanel />
+          <OriginPanel />
         </div>
+        </div>
+        <div className="main__aside-right"/>
       </div>
-      </div>
-      <div className="main__aside-right"/>
-      </div>
+      <Footer />
     </div>
   );
 }
