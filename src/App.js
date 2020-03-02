@@ -10,35 +10,23 @@ function App() {
   const [qualityChange, setQualityChange] = useState([0,0,0,0]);
   const [randomResult, setRandomResult] = useState();
 
-  function randomQuality () {
+  const qualityColection = ["awfull","normal","exceptionall","perfect"]
+
+  function randomInputsResult (toRandom, nameColection, func) {
     let container = [];
     let i = 0
-    while (i < qualityChange[0]){
-      container.push("awfull")
-      i++
-    }
-    i = 0
-    while (i < qualityChange[1]){
-      container.push("normall")
-      i++
-    }
-    i = 0
-    while (i < qualityChange[2]){
-      container.push("exceptionall")
-      i++
-    }
-    i = 0
-    while (i < qualityChange[3]){
-      container.push("perfect")
-      i++
-    }
-    i = 0
+      for (let x = -1 ; x < toRandom.length ; x++){
+        while (i < toRandom[x]){
+          container.push(nameColection[x])
+          i++
+        }
+        i = 0
+      }
     console.log(container);
     let result = container[Math.floor(Math.random() * container.length)];
     console.log(randomResult)
-    setRandomResult(result)
+    func(result)
   }
-
 
   function handleQualityChange(value) {
     setQualityChange(value);
@@ -59,7 +47,7 @@ function App() {
         <button
           className="neutralButton"
           onClick={() => 
-            randomQuality()
+            randomInputsResult(qualityChange, qualityColection, setRandomResult)
           }
         >
           NEW RESULT 

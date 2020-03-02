@@ -1,4 +1,4 @@
-import React, { componentDidMount, useEffect, useState  } from 'react';
+import React, { useEffect, useState  } from 'react';
 import OriginElement from '../OriginElement';
 
 import './style.css';
@@ -24,11 +24,16 @@ const OriginPanel = (props) => {
       valueOfPerfect])
   }
 
-  useEffect( () => {handleChange()}, [valueOfAwfull, valueOfNormal, valueOfExceptionall, valueOfPerfect]) 
+  useEffect( () => {handleChange()}, 
+    [valueOfAwfull,
+    valueOfNormal,
+    valueOfExceptionall,
+    valueOfPerfect]
+  ) 
   
   return (
     <div className="panelBox">
-      <h1>Quality of Awfull</h1>
+      <h1 className="activeFlag">Quality of Awfull</h1>
       <button 
           className="toggleButton" 
           onClick={toggleItemsDisplay}>
