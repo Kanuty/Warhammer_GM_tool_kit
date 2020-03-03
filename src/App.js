@@ -38,8 +38,6 @@ function App() {
     randomInputsResult(itemChange, itemColection, setItemRandom)
     randomInputsResult(originChange, originColection, setOriginRandom)
   }
-
-
   return (
     <div className="App">
       <Header />
@@ -50,7 +48,7 @@ function App() {
             <div id="shows__viev">
               <ShowResult 
                 quality={qualityRandom}
-                item={itemRandom}
+                itemType={itemRandom}
                 origin={originRandom}
               />
             </div>
