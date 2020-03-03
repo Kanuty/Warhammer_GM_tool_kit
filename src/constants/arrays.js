@@ -1,0 +1,47 @@
+export const qualityColection =
+ ["awfull",
+  "normal",
+  "exceptionall",
+  "perfect"]
+export const itemColection = 
+ ["mele weapon",
+  "ranged weapon",
+  "armor",
+  "potion",
+  "general equipment",
+  "treasure",
+  "food",
+  "clothes"]
+export const originColection = 
+ ["Chaos",
+  "Nurgle",
+  "Khorne",
+  "Tzeentch",
+  "Slaanesh",
+  "Skaven",
+  "Norsca",
+  "Beastmen",
+  "ChaosDwarfs",
+
+  "Empire",
+  "Bretonia",
+  "Estalia",
+  "Kislev",
+  "Tilea",
+  "Border Princedoms",
+  "Ind",
+  "Arraby",
+  "Nippon",
+  "Cathay",
+
+  "Sylvanic",
+  "Khemri",
+  "Dwarfs",
+  "Badlands",
+  "Lustria",
+  "Athen Loren",
+  "Ulthuan",
+  "Naggarond",
+  "Mountains of Mourn",
+  "Eastern Stepped",
+  "Albion",]

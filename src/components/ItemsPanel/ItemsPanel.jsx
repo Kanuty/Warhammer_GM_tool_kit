@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import OriginElement from '../OriginElement';
 
 import './style.css';
@@ -13,6 +13,45 @@ const ItemsPanel = (props) => {
   const toggleMilitaryDisplay = () => setMilitaryDisplay(!militaryDisplay);
   const toggleCivilianDisplay = () => setCivilianDisplay(!civilianDisplay);
 
+  const [valueOfMeleWeapons , setValueOfMeleWeapons] = useState(0);
+  const [valueOfRangedWeapons , setValueOfRangedWeapons] = useState(0);
+  const [valueOfArmors , setValueOfArmors] = useState(0);
+  const [valueOfPotions , setValueOfPotions] = useState(0);
+
+  const [valueOfGeneralEquipment , setValueOfGeneralEquipment] = useState(0);
+  const [valueOfTreasures , setValueOfTreasures] = useState(0);
+  const [valueOfFood , setValueOfFood] = useState(0);
+  const [valueOfClothes , setValueOfClothes] = useState(0);
+  const [valueOfTools , setValueOfTools] = useState(0);
+
+  function handleChange () {
+    props.onChange(
+    [
+      valueOfMeleWeapons,
+      valueOfRangedWeapons,
+      valueOfArmors,
+      valueOfPotions,
+      valueOfGeneralEquipment,
+      valueOfTreasures,
+      valueOfFood,
+      valueOfClothes,
+      valueOfTools
+    ])
+  }
+
+  useEffect( () => {handleChange()}, 
+    [ valueOfMeleWeapons,
+      valueOfRangedWeapons,
+      valueOfArmors,
+      valueOfPotions,
+      valueOfGeneralEquipment,
+      valueOfTreasures,
+      valueOfFood,
+      valueOfClothes,
+      valueOfTools
+    ]
+  ) 
+
   return (
     <div className="panelBox">
       <h1>Items</h1>
@@ -23,11 +62,10 @@ const ItemsPanel = (props) => {
       </button>
         { militaryDisplay?
           <div id="miltaryContainer">
-            <OriginElement party="mele weapons"/>
-            <OriginElement party="ranged weapons"/>
-            <OriginElement party="armors"/>
-            <OriginElement party="potions"/>
-            <OriginElement party="exotics"/>
+            <OriginElement party="mele weapons" onChange={ setValueOfMeleWeapons }/>
+            <OriginElement party="ranged weapons" onChange={ setValueOfRangedWeapons }/>
+            <OriginElement party="armors" onChange={ setValueOfArmors }/>
+            <OriginElement party="potions" onChange={ setValueOfPotions }/>
           </div>
           :
           <div/>
@@ -39,11 +77,11 @@ const ItemsPanel = (props) => {
         </button>
           { civilianDisplay?
           <div id="civilianContainer">
-            <OriginElement party="general equipment"/>
-            <OriginElement party="treasures"/>
-            <OriginElement party="food"/>
-            <OriginElement party="cloaths"/>
-            <OriginElement party="tools"/>
+            <OriginElement party="general equipment"  onChange={ setValueOfGeneralEquipment }/>
+            <OriginElement party="treasures"  onChange={ setValueOfTreasures }/>
+            <OriginElement party="food"  onChange={ setValueOfFood }/>
+            <OriginElement party="clothes"  onChange={ setValueOfClothes }/>
+            <OriginElement party="tools"  onChange={ setValueOfTools }/>
           </div>
           :
           <div/>
