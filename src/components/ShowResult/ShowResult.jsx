@@ -14,15 +14,15 @@ const ShowResult = (props) => {
         
         <div className="infoBox">
         <h2>Quality</h2>
-          <p>{quality}</p>
-        </div>
-        <div className="itemBox">
-        <h2>Item</h2>
-          <p>{item}</p>
+          <p className={quality}>{quality}</p>
         </div>
         <div className="infoBox">
         <h2>Origin</h2>
           <p>{origin}</p>
+        </div>
+        <div className="itemBox">
+        <h2>Item</h2>
+          <p>{item}</p>
         </div>
       </div>
   )

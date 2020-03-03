@@ -56,6 +56,27 @@
   margin: 3px;
 }
 
+ /* quality class */
+.awfull {
+  border: 1px solid var(--light-color);
+  color: #e34234;
+  text-shadow: 0px 0px 5px #770F01
+}
+.normal {
+  border: 1px solid var(--light-color);
+  color: #dedede;
+}
+.exceptionall {
+  border: 1px solid var(--light-color);
+  color: #cfe7eb;
+  text-shadow: 0px 0px 5px #c0c0c0;
+}
+.perfect {
+  border: 1px solid var(--light-color);
+  color: #FAE4AD;
+  text-shadow: 0px 0px 5px #F99A21;
+}
+
 @media screen and (min-width: 0px) and (max-width: 1366px){
   .showBox {
     flex-direction: column; 
