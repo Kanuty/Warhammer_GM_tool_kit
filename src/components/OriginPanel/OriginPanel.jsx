@@ -1,29 +1,58 @@
 import React, { useEffect, useState } from 'react';
 import OriginElement from '../OriginElement';
+
+import bretonia from '../../img/symbols/bretonnia/bretonia.png'
+import artois from '../../img/symbols/bretonnia/artois.png'
+import aquitaine from '../../img/symbols/bretonnia/aquitaine.png'
+import brionne from '../../img/symbols/bretonnia/brionne.png'
+import bastonne from '../../img/symbols/bretonnia/bastonne.png'
+import bordeleaux from '../../img/symbols/bretonnia/bordeleaux.png'
+import carcassonne from '../../img/symbols/bretonnia/carcassonne.png'
+import lyonesse from '../../img/symbols/bretonnia/lyonesse.png'
+import gisoreux from '../../img/symbols/bretonnia/gisoreux.png'
+import mousillon from '../../img/symbols/bretonnia/mousillon.png'
+import montfort from '../../img/symbols/bretonnia/montfort.png'
+import parravon from '../../img/symbols/bretonnia/parravon.png'
+import quenelles from '../../img/symbols/bretonnia/quenelles.png'
+
 import chaotic from '../../img/symbols/chaotic.png'
 import khorne from '../../img/symbols/khorne.png'
 import tzeentch from '../../img/symbols/tzeentch.png'
 import slaanesh from '../../img/symbols/slaanesh.png'
 import nurgle from '../../img/symbols/nurgle.png'
 import skaven from '../../img/symbols/skavenish.png'
-import sylvanic from '../../img/symbols/vampiric.png'
 import norsca from '../../img/symbols/norsca.png'
-import imperium from '../../img/symbols/imperial.png'
-import dwarfs from '../../img/symbols/dwarvish.png'
+import beastmen from '../../img/symbols/beastmen.png'
+import chaosDwarfs from '../../img/symbols/chaosDwarfs.png'
+
+import imperium from '../../img/symbols/empire/imperial.png'
+import averland from '../../img/symbols/empire/averland.png'
+import hochland from '../../img/symbols/empire/hochland.png'
+import middenland from '../../img/symbols/empire/middenland.png'
+import nordland from '../../img/symbols/empire/nordland.png'
+import ostermark from '../../img/symbols/empire/ostermark.png'
+import ostland from '../../img/symbols/empire/ostland.png'
+import reikland from '../../img/symbols/empire/reikland.png'
+import stirland from '../../img/symbols/empire/stirland.png'
+import sylvanic from '../../img/symbols/empire/sylvania.png'
+import talabecland from '../../img/symbols/empire/talabecland.png'
+import westerland from '../../img/symbols/empire/westerland.png'
+import wissenland from '../../img/symbols/empire/wissenland.png'
+
 import kislev from '../../img/symbols/kislev.png'
 import estalia from '../../img/symbols/estalia.png'
-import bretonia from '../../img/symbols/bretonia.png'
 import greenskins from '../../img/symbols/greenskins.png'
 import tilea from '../../img/symbols/tilea.png'
 import border from '../../img/symbols/border.png'
-import beastmen from '../../img/symbols/beastmen.png'
+
 import lustria from '../../img/symbols/lustria.png'
 import khemri from '../../img/symbols/khemri.png'
+import dwarfs from '../../img/symbols/dwarvish.png'
 import highElfs from '../../img/symbols/highElfs.png'
 import woodElfs from '../../img/symbols/woodElfs.png'
 import naggarond from '../../img/symbols/naggarond.png'
 import ogres from '../../img/symbols/ogres.png'
-import chaosDwarfs from '../../img/symbols/chaosDwarfs.png'
+
 
 import './style.css';
 
@@ -74,6 +103,7 @@ const OriginPanel = (props) => {
 
   const [valueOfImperium , setValueOfImperium] = useState(0);
   const [valueOfAverland , setValueOfAverland] = useState(0);
+  const [valueOfDrakwald , setValueOfDrakwald] = useState(0);
   const [valueOfHochland , setValueOfHochland] = useState(0);
   const [valueOfMiddenland , setValueOfMiddenland] = useState(0);
   const [valueOfNordland , setValueOfNordland] = useState(0);
@@ -140,6 +170,7 @@ const OriginPanel = (props) => {
 
       valueOfImperium,
       valueOfAverland,
+      valueOfDrakwald,
       valueOfHochland,
       valueOfMiddenland,
       valueOfNordland,
@@ -207,6 +238,7 @@ const OriginPanel = (props) => {
 
     valueOfImperium,
     valueOfAverland,
+    valueOfDrakwald,
     valueOfHochland,
     valueOfMiddenland,
     valueOfNordland,
@@ -254,22 +286,22 @@ const OriginPanel = (props) => {
         { bretonniaDisplay?
           <div id="BretonniaContainer">
             <OriginElement logo={bretonia} party="Bretonnia" onChange={setValueOfBretonia}/>
-            <OriginElement party="Aquitaine" onChange={setValueOfAquitaine}/>
-            <OriginElement party="Artois" onChange={setValueOfArtois}/>
-            <OriginElement party="Bastonne" onChange={setValueOfBastonne}/>
-            <OriginElement party="Bordeleaux" onChange={setValueOfBordeleaux}/>
-            <OriginElement party="Brionne" onChange={setValueOfBrionne}/>
-            <OriginElement party="Carcassonne" onChange={setValueOfCarcassonne}/>
-            <OriginElement party="Couronne" onChange={setValueOfCouronne}/>
-            <OriginElement party="Cuileux" onChange={setValueOfCuileux}/>
-            <OriginElement party="Gisoreux" onChange={setValueOfGisoreux}/>
-            <OriginElement party="Glanborielle" onChange={setValueOfGlanborielle}/>
-            <OriginElement party="L'anguillie" onChange={setValueOfLanguillie}/>
-            <OriginElement party="Lyonesse" onChange={setValueOfLyonesse}/>
-            <OriginElement party="Montfort" onChange={setValueOfMontfort}/>
-            <OriginElement party="Mousillon" onChange={setValueOfMousillon}/>
-            <OriginElement party="Parravon" onChange={setValueOfParravon}/>
-            <OriginElement party="Quenelles" onChange={setValueOfQuenelles}/>
+            <OriginElement logo={aquitaine} party="Aquitaine" onChange={setValueOfAquitaine}/>
+            <OriginElement logo={artois} party="Artois" onChange={setValueOfArtois}/>
+            <OriginElement logo={bastonne} party="Bastonne" onChange={setValueOfBastonne}/>
+            <OriginElement logo={bordeleaux} party="Bordeleaux" onChange={setValueOfBordeleaux}/>
+            <OriginElement logo={brionne} party="Brionne" onChange={setValueOfBrionne}/>
+            <OriginElement logo={carcassonne} party="Carcassonne" onChange={setValueOfCarcassonne}/>
+            <OriginElement logo={bretonia} party="Couronne" onChange={setValueOfCouronne}/>
+            <OriginElement logo={bretonia} party="Cuileux" onChange={setValueOfCuileux}/>
+            <OriginElement logo={gisoreux} party="Gisoreux" onChange={setValueOfGisoreux}/>
+            <OriginElement logo={bretonia} party="Glanborielle" onChange={setValueOfGlanborielle}/>
+            <OriginElement logo={bretonia} party="L'anguillie" onChange={setValueOfLanguillie}/>
+            <OriginElement logo={lyonesse} party="Lyonesse" onChange={setValueOfLyonesse}/>
+            <OriginElement logo={montfort} party="Montfort" onChange={setValueOfMontfort}/>
+            <OriginElement logo={mousillon} party="Mousillon" onChange={setValueOfMousillon}/>
+            <OriginElement logo={parravon} party="Parravon" onChange={setValueOfParravon}/>
+            <OriginElement logo={quenelles} party="Quenelles" onChange={setValueOfQuenelles}/>
           </div>
         :
           <div/>}
@@ -302,20 +334,21 @@ const OriginPanel = (props) => {
         { empireDisplay?
           <div id="EmpireContainer">
             <OriginElement logo={imperium} party="Empire" onChange={setValueOfImperium}/>
-            <OriginElement party="Averland" onChange={setValueOfAverland}/>
-            <OriginElement party="Hochland" onChange={setValueOfHochland}/>
-            <OriginElement party="Middenland" onChange={setValueOfMiddenland}/>
-            <OriginElement party="Nordland" onChange={setValueOfNordland}/>
-            <OriginElement party="Ostermark" onChange={setValueOfOstermark}/>
-            <OriginElement party="Ostland" onChange={setValueOfOstland}/>
-            <OriginElement party="Reikland" onChange={setValueOfReikland}/>
-            <OriginElement party="Solland" onChange={setValueOfSolland}/>
-            <OriginElement party="Stirland" onChange={setValueOfStirland}/>
+            <OriginElement logo={averland} party="Averland" onChange={setValueOfAverland}/>
+            <OriginElement logo={imperium} party="Drakwald" onChange={setValueOfDrakwald}/>
+            <OriginElement logo={hochland} party="Hochland" onChange={setValueOfHochland}/>
+            <OriginElement logo={middenland} party="Middenland" onChange={setValueOfMiddenland}/>
+            <OriginElement logo={nordland} party="Nordland" onChange={setValueOfNordland}/>
+            <OriginElement logo={ostermark} party="Ostermark" onChange={setValueOfOstermark}/>
+            <OriginElement logo={ostland} party="Ostland" onChange={setValueOfOstland}/>
+            <OriginElement logo={reikland} party="Reikland" onChange={setValueOfReikland}/>
+            <OriginElement logo={imperium} party="Solland" onChange={setValueOfSolland}/>
+            <OriginElement logo={stirland} party="Stirland" onChange={setValueOfStirland}/>
             <OriginElement logo={sylvanic} party="Sylvania" onChange={setValueOfSylvanic}/>
-            <OriginElement party="Talabecland" onChange={setValueOfTalabecland}/>
-            <OriginElement party="Westerland" onChange={setValueOfWesterland}/>
-            <OriginElement party="Wissenland" onChange={setValueOfWissenland}/>
-            <OriginElement party="The Moot" onChange={setValueOfThemoot}/>
+            <OriginElement logo={talabecland} party="Talabecland" onChange={setValueOfTalabecland}/>
+            <OriginElement logo={westerland} party="Westerland" onChange={setValueOfWesterland}/>
+            <OriginElement logo={wissenland} party="Wissenland" onChange={setValueOfWissenland}/>
+            <OriginElement logo={imperium} party="The Moot" onChange={setValueOfThemoot}/>
           </div>
         :
           <div/>}

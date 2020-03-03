@@ -1,0 +1,66 @@
+.showBox{
+  align-content: center;
+  background-color: var(--deep-dark-color);
+  border: 1px solid var(--highlight-color);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3px;
+  padding: 5px;
+  text-shadow: none;
+  width: 98%;
+
+}
+.infoBox, .itemBox{
+  align-content: center;
+  background-color: var(--main-color);
+  border: 1px solid var(--strong-highlight-color);
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+  width: 32%;
+}
+.infoBox h2 {
+  border: 1px solid var(--light-color);
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  border-radius: 10px;
+  margin: 3px;
+}
+
+.infoBox p{
+  font-size: 17px;
+  border: 1px solid var(--light-color);
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  border-radius: 10px;
+  font-size: 25px;
+  margin: 3px;
+}
+
+.itemBox h2 {
+  border: 1px solid var(--light-color);
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  border-radius: 10px;
+  margin: 3px;
+}
+
+.itemBox p {
+  border: 1px solid var(--light-color);
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  border-radius: 10px;
+  font-size: 25px;
+  margin: 3px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1366px){
+  .showBox {
+    flex-direction: column; 
+  }
+  .infoBox, .itemBox{
+    width: 98%;
+  }
+}

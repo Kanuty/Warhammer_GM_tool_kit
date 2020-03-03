@@ -3,6 +3,7 @@ export const qualityColection =
   "normal",
   "exceptionall",
   "perfect"]
+
 export const itemColection = 
  ["mele weapon",
   "ranged weapon",
@@ -12,6 +13,7 @@ export const itemColection =
   "treasure",
   "food",
   "clothes"]
+
 export const originColection = 
  ["Bretonia",
   "Aquitaine",
@@ -31,7 +33,7 @@ export const originColection =
   "Parravon",
   "Quenelles",
    
-  "Chaos",
+  "Chaos Undivided",
   "Nurgle",
   "Khorne",
   "Tzeentch",
@@ -43,6 +45,7 @@ export const originColection =
 
   "Empire",
   "Averland",
+  "Drakwald",
   "Hochland",
   "Middenland",
   "Nordland",

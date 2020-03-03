@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
-import OriginPanel from './components/OriginPanel';
-import QualityPanel from './components/QualityPanel';
+
+import Footer from './components/Footer';
 import ItemsPanel from './components/ItemsPanel';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import OriginPanel from './components/OriginPanel';
+import QualityPanel from './components/QualityPanel';
+import ShowResult from './components/ShowResult';
 
 import  { qualityColection, itemColection, originColection } from './constants/arrays';
 
@@ -37,6 +39,7 @@ function App() {
     randomInputsResult(originChange, originColection, setOriginRandom)
   }
 
+
   return (
     <div className="App">
       <Header />
@@ -45,9 +48,11 @@ function App() {
         <div className="main__viev-container">
           <div id="viev-container__shows">
             <div id="shows__viev">
-              <p>Quality: {qualityRandom}</p>
-              <p>Item: {itemRandom}</p>
-              <p>Origin: {originRandom}</p>
+              <ShowResult 
+                quality={qualityRandom}
+                item={itemRandom}
+                origin={originRandom}
+              />
             </div>
             <div id="shows__nation"/>
           </div>
