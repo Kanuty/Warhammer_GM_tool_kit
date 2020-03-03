@@ -6,14 +6,18 @@ import ItemsPanel from './components/ItemsPanel';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-function App() {
-  const [qualityChange, setQualityChange] = useState([0,0,0,0]);
-  const [randomResult, setRandomResult] = useState();
+import  { qualityColection, itemColection, originColection } from './constants/arrays';
 
-  const qualityColection = ["awfull","normal","exceptionall","perfect"]
+function App() {
+  const [qualityChange, setQualityChange] = useState([]);
+  const [qualityRandom, setQualityRandom] = useState();
+  const [itemChange, setItemChange] = useState([]);
+  const [itemRandom, setItemRandom] = useState();
+  const [originChange, setOriginChange] = useState([]);
+  const [originRandom, setOriginRandom] = useState();
 
   function randomInputsResult (toRandom, nameColection, func) {
-    let container = [];
+    const container = [];
     let i = 0
       for (let x = -1 ; x < toRandom.length ; x++){
         while (i < toRandom[x]){
@@ -24,12 +28,13 @@ function App() {
       }
     console.log(container);
     let result = container[Math.floor(Math.random() * container.length)];
-    console.log(randomResult)
     func(result)
   }
 
-  function handleQualityChange(value) {
-    setQualityChange(value);
+  const togetherRandom = () => {
+    randomInputsResult(qualityChange, qualityColection, setQualityRandom)
+    randomInputsResult(itemChange, itemColection, setItemRandom)
+    randomInputsResult(originChange, originColection, setOriginRandom)
   }
 
   return (
@@ -40,22 +45,24 @@ function App() {
         <div className="main__viev-container">
           <div id="viev-container__shows">
             <div id="shows__viev">
-              <p>Quality:{qualityChange} {randomResult}</p>
+              <p>Quality: {qualityRandom}</p>
+              <p>Item: {itemRandom}</p>
+              <p>Origin: {originRandom}</p>
             </div>
             <div id="shows__nation"/>
           </div>
         <button
           className="neutralButton"
           onClick={() => 
-            randomInputsResult(qualityChange, qualityColection, setRandomResult)
+            togetherRandom()
           }
         >
           NEW RESULT 
         </button>
         <div id="viev-container__setups">
-          <QualityPanel onChange={handleQualityChange}/>
-          <ItemsPanel />
-          <OriginPanel />
+          <QualityPanel onChange={setQualityChange}/>
+          <ItemsPanel onChange={setItemChange}/>
+          <OriginPanel onChange={setOriginChange}/>
         </div>
         </div>
         <div className="main__aside-right"/>

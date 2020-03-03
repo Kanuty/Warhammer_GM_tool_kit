@@ -15,7 +15,6 @@ header p {
   text-shadow: #222 2px 3px 3px;
 }
 
-
 @media screen and (min-width: 0px) and (max-width: 736px){
   header{
     height: 3rem;

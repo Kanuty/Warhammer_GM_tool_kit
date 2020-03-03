@@ -17,18 +17,22 @@ const OriginPanel = (props) => {
   const [valueOfPerfect , setValueOfPerfect] = useState(0);
 
   function handleChange () {
-    props.onChange([
+    props.onChange(
+    [
       valueOfAwfull,
       valueOfNormal,
       valueOfExceptionall,
-      valueOfPerfect])
+      valueOfPerfect
+    ])
   }
 
   useEffect( () => {handleChange()}, 
-    [valueOfAwfull,
+  [
+    valueOfAwfull,
     valueOfNormal,
     valueOfExceptionall,
-    valueOfPerfect]
+    valueOfPerfect
+  ]
   ) 
   
   return (

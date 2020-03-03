@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import OriginElement from '../OriginElement';
 import chaotic from '../../img/symbols/chaotic.png'
 import khorne from '../../img/symbols/khorne.png'
@@ -41,7 +41,107 @@ const OriginPanel = (props) => {
 
   // To do: When at least one OriginElement is active, than toggle button change collor.
 
+  const [valueOfChaotic , setValueOfChaotic] = useState(0);
+  const [valueOfNurlge , setValueOfNurgle] = useState(0);
+  const [valueOfKhorne , setValueOfKhorne] = useState(0);
+  const [valueOfTzeentch , setValueOfTzeentch] = useState(0);
+  const [valueOfSlaanesh , setValueOfSlaanesh] = useState(0);
+  const [valueOfSkaven , setValueOfSkaven] = useState(0);
+  const [valueOfNorsca , setValueOfNorsca] = useState(0);
+  const [valueOfBeastmen , setValueOfBeastmen] = useState(0);
+  const [valueOfChaosdwarfs , setValueOfChaosdwarfs] = useState(0);
 
+  const [valueOfImperium , setValueOfImperium] = useState(0);
+  const [valueOfBretonia , setValueOfBretonia] = useState(0);
+  const [valueOfEstalia , setValueOfEstalia] = useState(0);
+  const [valueOfKislev , setValueOfKislev] = useState(0);
+  const [valueOfTilea , setValueOfTilea] = useState(0);
+  const [valueOfBorderprinces , setValueOfBorderprinces] = useState(0);
+  const [valueOfInd , setValueOfInd] = useState(0);
+  const [valueOfArraby , setValueOfArraby] = useState(0);
+  const [valueOfNippon , setValueOfNippon] = useState(0);
+  const [valueOfCathay , setValueOfCathay] = useState(0);
+
+  const [valueOfSylvanic , setValueOfSylvanic] = useState(0);
+  const [valueOfKhemri , setValueOfKhemri] = useState(0);
+  const [valueOfDwarfs , setValueOfDwarfs] = useState(0);
+  const [valueOfGreenskins , setValueOfGreenskins] = useState(0);
+  const [valueOfLustria , setValueOfLustria] = useState(0);
+  const [valueOfWoodelfs , setValueOfWoodelfs] = useState(0);
+  const [valueOfHighelfs , setValueOfHighElfs] = useState(0);
+  const [valueOfDarkelfs , setValueOfDarkElfs] = useState(0);
+  const [valueOfOgres , setValueOfOgres] = useState(0);
+  const [valueOfHobgoblins , setValueOfHobgoblins] = useState(0);
+  const [valueOfAlbion , setValueOfAlbion] = useState(0);
+
+  function handleChange () {
+    props.onChange(
+    [ valueOfChaotic,
+      valueOfNurlge,
+      valueOfKhorne,
+      valueOfTzeentch,
+      valueOfSlaanesh,
+      valueOfSkaven,
+      valueOfNorsca,
+      valueOfBeastmen,
+      valueOfChaosdwarfs,
+      valueOfImperium,
+      valueOfBretonia,
+      valueOfEstalia,
+      valueOfKislev,
+      valueOfTilea,
+      valueOfBorderprinces,
+      valueOfInd,
+      valueOfArraby,
+      valueOfNippon,
+      valueOfCathay,
+      valueOfSylvanic,
+      valueOfKhemri,
+      valueOfDwarfs,
+      valueOfGreenskins,
+      valueOfLustria,
+      valueOfWoodelfs,
+      valueOfHighelfs,
+      valueOfDarkelfs,
+      valueOfOgres,
+      valueOfHobgoblins,
+      valueOfAlbion
+    ])
+  }
+
+  useEffect( () => {handleChange()}, 
+    [ valueOfChaotic,
+      valueOfNurlge,
+      valueOfKhorne,
+      valueOfTzeentch,
+      valueOfSlaanesh,
+      valueOfSkaven,
+      valueOfNorsca,
+      valueOfBeastmen,
+      valueOfChaosdwarfs,
+      valueOfImperium,
+      valueOfBretonia,
+      valueOfEstalia,
+      valueOfKislev,
+      valueOfTilea,
+      valueOfBorderprinces,
+      valueOfInd,
+      valueOfArraby,
+      valueOfNippon,
+      valueOfCathay,
+      valueOfSylvanic,
+      valueOfKhemri,
+      valueOfDwarfs,
+      valueOfGreenskins,
+      valueOfLustria,
+      valueOfWoodelfs,
+      valueOfHighelfs,
+      valueOfDarkelfs,
+      valueOfOgres,
+      valueOfHobgoblins,
+      valueOfAlbion
+    ]
+  )
 
   return (
     <div className="panelBox">
@@ -53,15 +153,15 @@ const OriginPanel = (props) => {
         </button>
         { chaosDisplay?
           <div id="chaosContainer">
-            <OriginElement logo={chaotic} party="Chaos Undivided"/>
-            <OriginElement logo={nurgle} party="Nurgle"/>
-            <OriginElement logo={khorne} party="Khorne"/>
-            <OriginElement logo={tzeentch} party="Tzeentch"/>
-            <OriginElement logo={slaanesh} party="Slaanesh"/>
-            <OriginElement logo={skaven} party="Under Empire"/>
-            <OriginElement logo={norsca} party="Norsca"/>
-            <OriginElement logo={beastmen} party="Wildness"/>
-            <OriginElement logo={chaosDwarfs} party="Dark Lands"/>
+            <OriginElement logo={chaotic} party="Chaos Undivided" onChange={setValueOfChaotic}/>
+            <OriginElement logo={nurgle} party="Nurgle" onChange={setValueOfNurgle}/>
+            <OriginElement logo={khorne} party="Khorne" onChange={setValueOfKhorne}/>
+            <OriginElement logo={tzeentch} party="Tzeentch" onChange={setValueOfTzeentch}/>
+            <OriginElement logo={slaanesh} party="Slaanesh" onChange={setValueOfSlaanesh}/>
+            <OriginElement logo={skaven} party="Under Empire" onChange={setValueOfSkaven}/>
+            <OriginElement logo={norsca} party="Norsca" onChange={setValueOfNorsca}/>
+            <OriginElement logo={beastmen} party="Wildness" onChange={setValueOfBeastmen}/>
+            <OriginElement logo={chaosDwarfs} party="Dark Lands" onChange={setValueOfChaosdwarfs}/>
           </div>
         : 
           <div/>}
@@ -72,16 +172,16 @@ const OriginPanel = (props) => {
         </button>
         { humanKingdomsDisplay?
           <div id="humanKingdomsContainer">
-            <OriginElement logo={imperium} party="Imperium"/>
-            <OriginElement logo={bretonia} party="Bretonia"/>
-            <OriginElement logo={estalia} party="Estalia"/>
-            <OriginElement logo={kislev} party="Kislev"/>
-            <OriginElement logo={tilea} party="Tilea"/>
-            <OriginElement logo={border} party="Border Princes"/>
-            <OriginElement party="Ind"/>
-            <OriginElement party="Arraby"/>
-            <OriginElement party="Nippon"/>
-            <OriginElement party="Cathay"/>
+            <OriginElement logo={imperium} party="Empire" onChange={setValueOfImperium}/>
+            <OriginElement logo={bretonia} party="Bretonia" onChange={setValueOfBretonia}/>
+            <OriginElement logo={estalia} party="Estalia" onChange={setValueOfEstalia}/>
+            <OriginElement logo={kislev} party="Kislev" onChange={setValueOfKislev}/>
+            <OriginElement logo={tilea} party="Tilea" onChange={setValueOfTilea}/>
+            <OriginElement logo={border} party="Border Princedoms" onChange={setValueOfBorderprinces}/>
+            <OriginElement party="Ind" onChange={setValueOfInd}/>
+            <OriginElement party="Arraby" onChange={setValueOfArraby}/>
+            <OriginElement party="Nippon" onChange={setValueOfNippon}/>
+            <OriginElement party="Cathay" onChange={setValueOfCathay}/>
          </div>
          :
           <div/> }
@@ -92,17 +192,17 @@ const OriginPanel = (props) => {
         </button>
         { othersDisplay?
           <div  id="othersContainer">
-            <OriginElement logo={sylvanic} party="Sylvania"/>
-            <OriginElement logo={khemri} party="Khemri"/>
-            <OriginElement logo={dwarfs} party="Worlds Edge Mountains"/>
-            <OriginElement logo={greenskins} party="Badlands"/>
-            <OriginElement logo={lustria} party="Lustria"/>
-            <OriginElement logo={woodElfs} party="Athel Loren"/>
-            <OriginElement logo={highElfs} party="Ulthuan"/>
-            <OriginElement logo={naggarond} party="Naggarond"/>
-            <OriginElement logo={ogres} party="Mountains of Mourn"/>
-            <OriginElement party="Eastern Steppes"/>
-            <OriginElement party="Albion"/>
+            <OriginElement logo={sylvanic} party="Sylvania" onChange={setValueOfSylvanic}/>
+            <OriginElement logo={khemri} party="Khemri" onChange={setValueOfKhemri}/>
+            <OriginElement logo={dwarfs} party="Worlds Edge Mountains" onChange={setValueOfDwarfs}/>
+            <OriginElement logo={greenskins} party="Badlands" onChange={setValueOfGreenskins}/>
+            <OriginElement logo={lustria} party="Lustria" onChange={setValueOfLustria}/>
+            <OriginElement logo={woodElfs} party="Athel Loren" onChange={setValueOfWoodelfs}/>
+            <OriginElement logo={highElfs} party="Ulthuan" onChange={setValueOfHighElfs}/>
+            <OriginElement logo={naggarond} party="Naggarond" onChange={setValueOfDarkElfs}/>
+            <OriginElement logo={ogres} party="Mountains of Mourn" onChange={setValueOfOgres}/>
+            <OriginElement party="Eastern Steppes" onChange={setValueOfHobgoblins}/>
+            <OriginElement party="Albion" onChange={setValueOfAlbion}/>
           </div>
         :
           <div/> }
