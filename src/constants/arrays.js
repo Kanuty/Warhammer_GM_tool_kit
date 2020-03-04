@@ -5,11 +5,11 @@ export const qualityColection =
   "perfect"]
 
 export const itemColection = 
- ["mele weapon",
-  "ranged weapon",
+ ["mele",
+  "ranged",
   "armor",
   "potion",
-  "general equipment",
+  "general",
   "treasure",
   "food",
   "clothes"]

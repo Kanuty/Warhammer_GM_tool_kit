@@ -9,6 +9,7 @@ import QualityPanel from './components/QualityPanel';
 import ShowResult from './components/ShowResult';
 
 import  { qualityColection, itemColection, originColection } from './constants/arrays';
+import  { mele, ranged, armor } from './constants/itemsVault';
 
 function App() {
   const [qualityChange, setQualityChange] = useState([]);
@@ -17,6 +18,9 @@ function App() {
   const [itemRandom, setItemRandom] = useState();
   const [originChange, setOriginChange] = useState([]);
   const [originRandom, setOriginRandom] = useState();
+  const [indexOfItem, setIndexOfItem] = useState(0);
+
+  const collection = [mele, ranged, armor]
 
   function randomInputsResult (toRandom, nameColection, func) {
     const container = [];
@@ -31,13 +35,36 @@ function App() {
     console.log(container);
     let result = container[Math.floor(Math.random() * container.length)];
     func(result)
+
+    if (func === setItemRandom){
+
+      console.log("result:", result)
+    }
   }
+
+  function indexOfRandomItem (input) {
+    console.log("input:",input)
+      setIndexOfItem(Math.floor(Math.random() * input.length))
+      console.log("indexOfItem:",indexOfItem)
+  };
 
   const togetherRandom = () => {
     randomInputsResult(qualityChange, qualityColection, setQualityRandom)
     randomInputsResult(itemChange, itemColection, setItemRandom)
     randomInputsResult(originChange, originColection, setOriginRandom)
+    deley()
   }
+
+  function deley () {
+    if (itemRandom == itemColection[0]) {indexOfRandomItem(collection[0])}
+    if (itemRandom == itemColection[1]) {indexOfRandomItem(collection[1])}
+    if (itemRandom == itemColection[2]) {indexOfRandomItem(collection[2])}
+    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
+    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
+    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
+    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
+  }
+
   return (
     <div className="App">
       <Header />
@@ -50,6 +77,7 @@ function App() {
                 quality={qualityRandom}
                 itemType={itemRandom}
                 origin={originRandom}
+                indexOfItem={indexOfItem}
               />
             </div>
             <div id="shows__nation"/>

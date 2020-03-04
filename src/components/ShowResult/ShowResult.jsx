@@ -1,24 +1,25 @@
 import React from 'react';
 
+import  { mele, ranged, armor } from '../../constants/itemsVault';
+import  { itemColection } from '../../constants/arrays';
 import './style.css';
 
 const ShowResult = (props) => {
   const {
-    quality,
+    indexOfItem,
     itemType,
     origin,
+    quality
   } = props;
 
-  const sword = {name:"sword", value:20, category:"common", power:"S", properties:"none", special:"none"}
-  const hammer = {name:"hammer", value:20, category:"common", power:"S", properties:"none", special:"none"}
-  const axe = {name:"axe", value:20, category:"common", power:"S", properties:"none", special:"none"}
-  const testArray = [sword, hammer, axe]
 
-  function randomResult (input) {
-  return  ( input[Math.floor(Math.random() * input.length)])
-  };
+  // const testArray = [sword, hammer, axe]
+
+  // function randomResult (input) {
+  // return  ( input[Math.floor(Math.random() * input.length)])
+  // };
   
-  let meleWeapon = randomResult(testArray)
+  // let meleWeapon = randomResult(testArray)
 
   return (
       <div className="showBox">
@@ -38,27 +39,41 @@ const ShowResult = (props) => {
         </div>
 
         <div>
-          {itemType === "mele weapon"?
-          
+        {itemType === itemColection[0]?
           <div className="itemBox">
-            <p>name: <i>{meleWeapon.name}</i></p>
-            <p>value: <i>{meleWeapon.value}</i> gc</p>
-            <p>categroy: <i>{meleWeapon.category}</i></p>
-            <p>power: <i>{meleWeapon.power}</i></p>
-            <p>properties: <i>{meleWeapon.properties}</i></p>
-            <p>special: <i>{meleWeapon.special}</i></p>
+            <p><b>name:</b><i><u> {mele[0].name} </u></i></p>
+            <p><b>value:</b><i> {mele[0].value}</i> gc</p>
+            <p><b>group:</b><i> {mele[0].group}</i></p>
+            <p><b>power:</b><i> {mele[0].power}</i></p>
+            <p><b>qualities:</b><i> {mele[0].qualities}</i></p>
           </div>
-          :
-          <div/>}
-         </div>
+        :itemType === itemColection[1]?
+          <div className="itemBox">
+            <p><b>name:</b><i><u> {ranged[0].name} </u></i></p>
+            <p><b>value:</b><i> {ranged[0].value}</i> gc</p>
+            <p><b>group:</b><i> {ranged[0].group}</i></p>
+            <p><b>power:</b><i> {ranged[0].power}</i></p>
+            <p><b>range:</b><i> {ranged[0].range}</i></p>
+            <p><b>qualities:</b><i> {ranged[0].qualities}</i></p>
+          </div>
+        :itemType === itemColection[2]?
+          <div className="itemBox">
+            <p><b>name:</b><i><u> {armor[0].name} </u></i></p>
+            <p><b>value:</b><i> {armor[0].value}</i></p>
+            <p><b>location:</b><i> {armor[0].location}</i></p>
+            <p><b>armor:</b><i> {armor[0].armor}</i></p>
+          </div>
+        : <div/>}
+        </div>
       </div>
   )
 };
 
 ShowResult.defaultProps = {
-  quality: "perfect",
-  itemType: "mele weapon",
+  indexOfItem: 0,
+  itemType: "mele",
   origin: "Empire",
+  quality: "perfect",
 };
 
 export default (ShowResult);
