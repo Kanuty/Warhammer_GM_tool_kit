@@ -1,0 +1,110 @@
+.showBox{
+  align-content: center;
+  background-color: var(--deep-dark-color);
+  border: 1px solid var(--highlight-color);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-evenly;
+  margin: 3px;
+  padding: 5px;
+  text-shadow: none;
+  width: 98%;
+
+}
+
+.lazybox {
+  align-content: center;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.infoBox {
+  align-content: center;
+  background-color: var(--main-color);
+  border: 1px solid var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+  width: 32%;
+}
+
+.infoBox h2 {
+  border: 1px solid var(--light-color);
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  border-radius: 10px;
+  margin: 3px;
+}
+
+.itemBox {
+  align-content: center;
+  background-color: var(--main-color);
+  border: 1px solid var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 15px;
+  padding: 2px;
+  text-align: center;
+}
+
+.infoBox p, .itemBox p{
+  font-size: 17px;
+  border: 1px solid var(--light-color);
+  box-shadow: 0px 2px 2px var(--shadow-color);
+  border-radius: 10px;
+  font-size: 25px;
+  margin: 3px;
+}
+
+ /* quality class */
+.awfull {
+  border: 1px solid var(--light-color);
+  color: #e34234;
+  text-shadow: 0px 0px 5px #770F01
+}
+.normal {
+  border: 1px solid var(--light-color);
+  color: #dedede;
+}
+.exceptionall {
+  border: 1px solid var(--light-color);
+  color: #cfe7eb;
+  text-shadow: 0px 0px 5px #c0c0c0;
+}
+.perfect {
+  border: 1px solid var(--light-color);
+  color: #FAE4AD;
+  text-shadow: 0px 0px 5px #F99A21;
+}
+
+.origin {
+  border: 1px solid var(--light-color);
+  color: rgb(186, 250, 173);
+  text-shadow: 0px 0px 5px rgb(112, 249, 33);
+}
+
+.type {
+  border: 1px solid var(--light-color);
+  color: rgb(173, 219, 250);
+  text-shadow: 0px 0px 5px rgb(33, 224, 249);
+}
+
+@media screen and (min-width: 0px) and (max-width: 1366px){
+  .infoBox, .itemBox{
+    width: 98%;
+  }
+  .itemBox{
+    margin:2px;
+  }
+  .lazybox{
+    flex-direction: column;
+  }
+}

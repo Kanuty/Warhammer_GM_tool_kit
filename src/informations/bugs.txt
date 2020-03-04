@@ -1,0 +1,3 @@
+known bugs:
+1) if a quality/item/origin is selected (label with img is highlighted) and than his panel is set to hide and later to show,
+than item loose his highlight (information about beeing active). Nevetherless, item is still active
