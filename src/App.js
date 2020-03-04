@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 import Footer from './components/Footer';
@@ -9,7 +9,7 @@ import QualityPanel from './components/QualityPanel';
 import ShowResult from './components/ShowResult';
 
 import  { qualityColection, itemColection, originColection } from './constants/arrays';
-import  { mele, ranged, armor } from './constants/itemsVault';
+import  {  mele, ranged, armor, potion, general, treasure, food, clothes, tools  } from './constants/itemsVault';
 
 function App() {
   const [qualityChange, setQualityChange] = useState([]);
@@ -20,9 +20,10 @@ function App() {
   const [originRandom, setOriginRandom] = useState();
   const [indexOfItem, setIndexOfItem] = useState(0);
 
-  const collection = [mele, ranged, armor]
+  const collection = [ mele, ranged, armor, potion, general, treasure, food, clothes, tools ]
 
   function randomInputsResult (toRandom, nameColection, func) {
+
     const container = [];
     let i = 0
       for (let x = -1 ; x < toRandom.length ; x++){
@@ -36,15 +37,11 @@ function App() {
     let result = container[Math.floor(Math.random() * container.length)];
     func(result)
 
-    if (func === setItemRandom){
-
-      console.log("result:", result)
-    }
   }
 
-  function indexOfRandomItem (input) {
-    console.log("input:",input)
-      setIndexOfItem(Math.floor(Math.random() * input.length))
+  function indexOfRandomItem (collectionOfItems) {
+    console.log("input:",collectionOfItems)
+      setIndexOfItem(Math.floor(Math.random() * collectionOfItems.length))
       console.log("indexOfItem:",indexOfItem)
   };
 
@@ -52,18 +49,26 @@ function App() {
     randomInputsResult(qualityChange, qualityColection, setQualityRandom)
     randomInputsResult(itemChange, itemColection, setItemRandom)
     randomInputsResult(originChange, originColection, setOriginRandom)
-    deley()
+    setIndexOfItem(0)
   }
 
-  function deley () {
+  useEffect( () => {    chooseItem()}, 
+  [
+    togetherRandom
+  ]
+  ) 
+
+  function chooseItem(){
     if (itemRandom == itemColection[0]) {indexOfRandomItem(collection[0])}
     if (itemRandom == itemColection[1]) {indexOfRandomItem(collection[1])}
     if (itemRandom == itemColection[2]) {indexOfRandomItem(collection[2])}
-    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
-    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
-    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
-    // if (itemRandom = "mele") {indexOfRandomItem(mele)}
+    if (itemRandom == itemColection[3]) {indexOfRandomItem(collection[3])}
+    if (itemRandom == itemColection[4]) {indexOfRandomItem(collection[4])}
+    if (itemRandom == itemColection[5]) {indexOfRandomItem(collection[5])}
+    if (itemRandom == itemColection[6]) {indexOfRandomItem(collection[6])}
+    if (itemRandom == itemColection[7]) {indexOfRandomItem(collection[7])}
   }
+
 
   return (
     <div className="App">

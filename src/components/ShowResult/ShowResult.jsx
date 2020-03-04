@@ -1,6 +1,6 @@
 import React from 'react';
 
-import  { mele, ranged, armor } from '../../constants/itemsVault';
+import  { mele, ranged, armor, potion, general, treasure, food, clothes, tools } from '../../constants/itemsVault';
 import  { itemColection } from '../../constants/arrays';
 import './style.css';
 
@@ -12,14 +12,7 @@ const ShowResult = (props) => {
     quality
   } = props;
 
-
-  // const testArray = [sword, hammer, axe]
-
-  // function randomResult (input) {
-  // return  ( input[Math.floor(Math.random() * input.length)])
-  // };
   
-  // let meleWeapon = randomResult(testArray)
 
   return (
       <div className="showBox">
@@ -30,38 +23,68 @@ const ShowResult = (props) => {
           </div>
           <div className="infoBox">
             <h2>Origin</h2>
-            <p>{origin}</p>
+            <p className="origin">{origin}</p>
           </div>
           <div className="infoBox">
             <h2>itemType</h2>
-            <p>{itemType}</p>
+            <p className="type">{itemType}</p>
           </div>
         </div>
 
         <div>
         {itemType === itemColection[0]?
           <div className="itemBox">
-            <p><b>name:</b><i><u> {mele[0].name} </u></i></p>
-            <p><b>value:</b><i> {mele[0].value}</i> gc</p>
-            <p><b>group:</b><i> {mele[0].group}</i></p>
-            <p><b>power:</b><i> {mele[0].power}</i></p>
-            <p><b>qualities:</b><i> {mele[0].qualities}</i></p>
+            <p><b>name:</b><i><u> {mele[indexOfItem].name} </u></i></p>
+            <p><b>value:</b><i> {mele[indexOfItem].value}</i></p>
+            <p><b>group:</b><i> {mele[indexOfItem].group}</i></p>
+            <p><b>power:</b><i> {mele[indexOfItem].power}</i></p>
+            <p><b>qualities:</b><i> {mele[indexOfItem].qualities}</i></p>
           </div>
         :itemType === itemColection[1]?
           <div className="itemBox">
-            <p><b>name:</b><i><u> {ranged[0].name} </u></i></p>
-            <p><b>value:</b><i> {ranged[0].value}</i> gc</p>
-            <p><b>group:</b><i> {ranged[0].group}</i></p>
-            <p><b>power:</b><i> {ranged[0].power}</i></p>
-            <p><b>range:</b><i> {ranged[0].range}</i></p>
-            <p><b>qualities:</b><i> {ranged[0].qualities}</i></p>
+            <p><b>name:</b><i><u> {ranged[indexOfItem].name} </u></i></p>
+            <p><b>value:</b><i> {ranged[indexOfItem].value}</i></p>
+            <p><b>group:</b><i> {ranged[indexOfItem].group}</i></p>
+            <p><b>power:</b><i> {ranged[indexOfItem].power}</i></p>
+            <p><b>range:</b><i> {ranged[indexOfItem].range}</i></p>
+            <p><b>qualities:</b><i> {ranged[indexOfItem].qualities}</i></p>
           </div>
         :itemType === itemColection[2]?
           <div className="itemBox">
-            <p><b>name:</b><i><u> {armor[0].name} </u></i></p>
-            <p><b>value:</b><i> {armor[0].value}</i></p>
-            <p><b>location:</b><i> {armor[0].location}</i></p>
-            <p><b>armor:</b><i> {armor[0].armor}</i></p>
+            <p><b>name:</b><i><u> {armor[indexOfItem].name} </u></i></p>
+            <p><b>value:</b><i> {armor[indexOfItem].value}</i></p>
+            <p><b>location:</b><i> {armor[indexOfItem].location}</i></p>
+            <p><b>armor:</b><i> {armor[indexOfItem].armor}</i></p>
+          </div>
+          :itemType === itemColection[3]?
+          <div className="itemBox">
+            <p><b>name:</b><i><u> {potion[indexOfItem].name} </u></i></p>
+
+          </div>
+          :itemType === itemColection[4]?
+          <div className="itemBox">
+            <p><b>name:</b><i><u> {general[indexOfItem].name} </u></i></p>
+
+          </div>
+          :itemType === itemColection[5]?
+          <div className="itemBox">
+            <p><b>name:</b><i><u> {treasure[indexOfItem].name} </u></i></p>
+
+          </div>
+          :itemType === itemColection[6]?
+          <div className="itemBox">
+            <p><b>name:</b><i><u> {food[indexOfItem].name} </u></i></p>
+
+          </div>
+          :itemType === itemColection[7]?
+          <div className="itemBox">
+            <p><b>attire:</b><i><u> {clothes[indexOfItem].attire} </u></i></p>
+            <p><b>value:</b><i> {clothes[indexOfItem].value}</i></p>
+          </div>
+          :itemType === itemColection[8]?
+          <div className="itemBox">
+            <p><b>name:</b><i><u> {tools[indexOfItem].name} </u></i></p>
+            <p><b>value:</b><i> {tools[indexOfItem].value}</i></p>
           </div>
         : <div/>}
         </div>

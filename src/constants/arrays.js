@@ -12,7 +12,8 @@ export const itemColection =
   "general",
   "treasure",
   "food",
-  "clothes"]
+  "clothes",
+  "tools",]
 
 export const originColection = 
  ["Bretonia",

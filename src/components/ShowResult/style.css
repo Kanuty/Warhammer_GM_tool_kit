@@ -85,6 +85,18 @@
   text-shadow: 0px 0px 5px #F99A21;
 }
 
+.origin {
+  border: 1px solid var(--light-color);
+  color: rgb(186, 250, 173);
+  text-shadow: 0px 0px 5px rgb(112, 249, 33);
+}
+
+.type {
+  border: 1px solid var(--light-color);
+  color: rgb(173, 219, 250);
+  text-shadow: 0px 0px 5px rgb(33, 224, 249);
+}
+
 @media screen and (min-width: 0px) and (max-width: 1366px){
   .infoBox, .itemBox{
     width: 98%;
