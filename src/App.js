@@ -33,16 +33,13 @@ function App() {
         }
         i = 0
       }
-    console.log(container);
     let result = container[Math.floor(Math.random() * container.length)];
     func(result)
 
   }
 
   function indexOfRandomItem (collectionOfItems) {
-    console.log("input:",collectionOfItems)
-      setIndexOfItem(Math.floor(Math.random() * collectionOfItems.length))
-      console.log("indexOfItem:",indexOfItem)
+    setIndexOfItem(Math.floor(Math.random() * collectionOfItems.length))
   };
 
   const togetherRandom = () => {
@@ -53,9 +50,9 @@ function App() {
   }
 
   useEffect( () => {    chooseItem()}, 
-  [
-    togetherRandom
-  ]
+    [
+      togetherRandom
+    ]
   ) 
 
   function chooseItem(){
@@ -68,7 +65,6 @@ function App() {
     if (itemRandom === itemColection[6]) {indexOfRandomItem(collection[6])}
     if (itemRandom === itemColection[7]) {indexOfRandomItem(collection[7])}
   }
-
 
   return (
     <div className="App">

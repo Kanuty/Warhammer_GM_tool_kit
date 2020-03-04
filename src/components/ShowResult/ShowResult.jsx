@@ -12,8 +12,6 @@ const ShowResult = (props) => {
     quality
   } = props;
 
-  
-
   return (
       <div className="showBox">
         <div className="lazybox">
@@ -47,6 +45,7 @@ const ShowResult = (props) => {
             <p><b>group:</b><i> {ranged[indexOfItem].group}</i></p>
             <p><b>power:</b><i> {ranged[indexOfItem].power}</i></p>
             <p><b>range:</b><i> {ranged[indexOfItem].range}</i></p>
+            <p><b>reload:</b><i> {ranged[indexOfItem].reload}</i></p>
             <p><b>qualities:</b><i> {ranged[indexOfItem].qualities}</i></p>
           </div>
         :itemType === itemColection[2]?

@@ -34,6 +34,12 @@
   {name:"spear", value:"10 gc", group:"flail", power:"S", qualities:"fast"},
   {name:"sword-breaker", value:"5 gc", group:"parrying", power:"S-3", qualities:"balanced, special"},
 
+  //skaven mele weapons
+  {name:"plague censer", value:"???", group:"flail", power:"S+1", qualities:"impact, special, tiring"},
+  {name:"punch dagger", value:"???", group:"ordinary", power:"S-1", qualities:"balaced, defensive"},
+  {name:"rat claws", value:"???", group:"ordinary", power:"S-3", qualities:"special"},
+  {name:"tail blade", value:"???", group:"ordinary", power:"S-2", qualities:"fast, special"},
+  {name:"things-catcher", value:"???", group:"two-handed", power:"S+1", qualities:"snare"},
  ]
 
   export const ranged = 
@@ -69,13 +75,74 @@
   {name:"repeater handgun", value:"600 gc", group:"engineer", power:"4", range:"24/48", reload:"free", qualities:"experimental, special"},
   {name:"repeater pistol", value:"400 gc", group:"engineer", power:"4", range:"8/16", reload:"2 full", qualities:"experimental, special"},
 
+//siege weapons... yes really :v
+  {name:"bellybow", value:"150 gc", group:"ordinary", power:"5", range:"50/100", reload:"6 full", qualities:"none"},
+  {name:"bolt thrower", value:"200 gc", group:"ordinary", power:"12", range:"150/300", reload:"15 full", qualities:"armor piercing"},
+  {name:"oxybels", value:"600 gc", group:"ordinary", power:"10", range:"70/150", reload:"12 full", qualities:"none"},
+  {name:"scorpion", value:"400 gc", group:"ordinary", power:"8", range:"100/200", reload:"10 full", qualities:"none"},
+
+//skaven ranged weapons yes yes
+  {name:"blowgun", value:"???", group:"blowgun", power:"0", range:"8/16", reload:"half", qualities:"none"},
+  {name:"poisoned-wind globe", value:"???", group:"throwing", power:"special", range:"4/10", reload:"full", qualities:"special"},
+  {name:"ratling gun", value:"???", group:"engineer", power:"3", range:"10/30", reload:"10 full", qualities:"experimental, shrapnel"},
+  {name:"smoke bomb", value:"???", group:"throwing", power:"n/a", range:"4/20", reload:"full", qualities:"special"},
+  {name:"warpfire thrower", value:"???", group:"engineer", power:"4", range:"10 full", reload:"experimental, special", qualities:"special"},
+  {name:"warplock jezzail", value:"???", group:"gunpowder", power:"5", range:"4/20", reload:"full", qualities:"armor piercing, unreliable"},
+  {name:"warplock pistol", value:"???", group:"gunpowder", power:"5", range:"4/20", reload:"2 full", qualities:"armor piercing, unreliable"}
  ]
 
   export const armor = 
  [
   {name:"leather skullcap", value:"3 gc",  location:"head", armor:1 },
   {name:"leather jerkin", value:"6 gc",  location:"body", armor:1},
-  {name:"leather leggings", value:"12 gc",  location:"body,arms", armor:1},
+  {name:"leather jack", value:"12 gc",  location:"body, arms", armor:1},
+  {name:"leather leggings", value:"10 gc",  location:"legs", armor:1},
+  {name:"full leather", value:"25 gc",  location:"all", armor:1},
+
+  {name:"studded skullcap", value:"10 gc",  location:"head", armor:1},
+  {name:"studded jerkin", value:"20 gc",  location:"body", armor:1},
+  {name:"studded jack", value:"30 gc",  location:"body, arms", armor:1},
+  {name:"studded leggins", value:"120 gc",  location:"legs", armor:1},
+  {name:"full studded leather", value:"90 gc",  location:"all", armor:2},
+
+  {name:"mail coif", value:"20 gc",  location:"head", armor:2},
+  {name:"mail shirt", value:"60 gc",  location:"body", armor:2},
+  {name:"sleved mail shirt", value:"95 gc",  location:"body, arms", armor:2},
+  {name:"mail coat", value:"75 gc",  location:"body, legs", armor:2},
+  {name:"sleeved mail coat", value:"130 gc",  location:"body, arms, legs", armor:2},
+  {name:"mail leggings", value:"20 gc",  location:"legs", armor:2},
+  {name:"full mail armor", value:"170 gc",  location:"all", armor:3},
+
+  {name:"scale coif", value:"30 gc",  location:"head", armor:3},
+  {name:"scale shirt", value:"150 gc",  location:"body", armor:3},
+  {name:"sleeved scale shirt", value:"225 gc",  location:"body, arms", armor:3},
+  {name:"scale coat", value:"225 gc",  location:"body, legs", armor:3},
+  {name:"sleeved scale coart", value:"300 gc",  location:"body, arms, legs", armor:3},
+  {name:"scale leggings", value:"75 gc",  location:"legs", armor:3},
+  {name:"full scale armor", value:"360 gc",  location:"all", armor:4},
+
+  {name:"plate helmet", value:"30 gc",  location:"head", armor:2},
+  {name:"brestplate", value:"70 gc",  location:"body", armor:2},
+  {name:"plate bracers", value:"60 gc",  location:"arms", armor:2},
+  {name:"plate leggings", value:"70 gc",  location:"legs", armor:2},
+  {name:"full plate armor", value:"400 gc",  location:"armor", armor:5},
+
+  {name:"ithilmar main coif", value:"???",  location:"head", armor:3},
+  {name:"ithilmar mail shirt", value:"???",  location:"body", armor:3},
+  {name:"ithilmar sleeved shirt", value:"???",  location:"body, arms", armor:3},
+  {name:"ithilmar mail coat", value:"???",  location:"body, legs", armor:3},
+  {name:"ithilmar sleeved mail coat", value:"???",  location:"body, arms, legs", armor:3},
+  {name:"ithilmar mail leggings", value:"???",  location:"body legs", armor:3},
+  {name:"ithilmar full mail armor", value:"???",  location:"all", armor:4},
+
+  {name:"gromril helmet", value:"???",  location:"head", armor:3},
+  {name:"gromril brestplate", value:"???",  location:"body", armor:3},
+  {name:"gromril plate bracers", value:"???",  location:"arms", armor:3},
+  {name:"gromril plate leggings", value:"???",  location:"legs", armor:3},
+  {name:"gromril full plate", value:"???",  location:"armor", armor:6},
+
+  {name:"chaos armor", value:"???",  location:"armor", armor:5},
+
  ]
 
  export const potion = 
