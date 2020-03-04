@@ -50,7 +50,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  margin: 2px;
+  margin: 15px;
   padding: 2px;
   text-align: center;
 }
@@ -100,5 +100,11 @@
 @media screen and (min-width: 0px) and (max-width: 1366px){
   .infoBox, .itemBox{
     width: 98%;
+  }
+  .itemBox{
+    margin:2px;
+  }
+  .lazybox{
+    flex-direction: column;
   }
 }

@@ -84,7 +84,6 @@ const ShowResult = (props) => {
           :itemType === itemColection[8]?
           <div className="itemBox">
             <p><b>name:</b><i><u> {tools[indexOfItem].name} </u></i></p>
-            <p><b>value:</b><i> {tools[indexOfItem].value}</i></p>
           </div>
         : <div/>}
         </div>

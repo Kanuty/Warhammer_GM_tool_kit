@@ -24,6 +24,10 @@ header img{
   height: 100px;
 } 
 
+header a{
+  color: rgb(169, 121, 248)
+}
+
 @media screen and (min-width: 0px) and (max-width: 736px){
   header{
     height: 5rem;

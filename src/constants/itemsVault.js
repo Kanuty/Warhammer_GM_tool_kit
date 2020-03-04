@@ -1,42 +1,42 @@
   export const mele = 
  [
-  {name:"sword", value:'20gc', group:"ordinary", power:"S", qualities:"none"},
-  {name:"hammer", value:'20gc', group:"ordinary", power:"S", qualities:"none"},
-  {name:"axe", value:'20gc', group:"ordinary", power:"S", qualities:"none"},
+  {name:"sword", value:'20 gc', group:"ordinary", power:"S", qualities:"none"},
+  {name:"hammer", value:'20 gc', group:"ordinary", power:"S", qualities:"none"},
+  {name:"axe", value:'20 gc', group:"ordinary", power:"S", qualities:"none"},
  ]
 
   export const ranged = 
  [
-  {name:"bola", value:"7s", group:"entangling", power:"1", range:"8/16", qualities:"snare"},
-  {name:"bow", value:'10gc', group:"ordinary", power:"3", range:"24/48", qualities:"none"},
-  {name:"crossbow", value:'25gc', group:"ordinary", power:"4", range:"30/60", qualities:"none"},
+  {name:"bola", value:"7 s", group:"entangling", power:"1", range:"8/16", qualities:"snare"},
+  {name:"bow", value:'10 gc', group:"ordinary", power:"3", range:"24/48", qualities:"none"},
+  {name:"crossbow", value:'25 gc', group:"ordinary", power:"4", range:"30/60", qualities:"none"},
  ]
 
   export const armor = 
  [
-  {name:"leather skullcap", value:'3gc',  location:"head", armor:1 },
-  {name:"leather jerkin", value:'6gc',  location:"body", armor:1},
-  {name:"leather leggings", value:'12gc',  location:"body,arms", armor:1},
+  {name:"leather skullcap", value:'3 gc',  location:"head", armor:1 },
+  {name:"leather jerkin", value:'6 gc',  location:"body", armor:1},
+  {name:"leather leggings", value:'12 gc',  location:"body,arms", armor:1},
  ]
 
  export const potion = 
  [
-  {name:"q", value:3,  location:"head", armor:1 },
+  {name:"potions are comming soon"},
 
  ]
  export const general = 
  [
-  {name:"w", value:3,  location:"head", armor:1 },
+  {name:"general eq is comming soon"},
 
  ]
  export const treasure = 
  [
-  {name:"e", value:3,  location:"head", armor:1 },
+  {name:"treasures are comming soon"},
 
  ]
  export const food = 
  [
-  {name:"r", value:3,  location:"head", armor:1 },
+  {name:" food is comming soon"},
 
  ]
  export const clothes = 
@@ -82,7 +82,7 @@
 
  export const tools = 
  [
-  {name:"r", value:3,  location:"head", armor:1 },
+  {name:"tools are comming soon",},
 
  ]
 

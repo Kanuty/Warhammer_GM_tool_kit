@@ -59,14 +59,14 @@ function App() {
   ) 
 
   function chooseItem(){
-    if (itemRandom == itemColection[0]) {indexOfRandomItem(collection[0])}
-    if (itemRandom == itemColection[1]) {indexOfRandomItem(collection[1])}
-    if (itemRandom == itemColection[2]) {indexOfRandomItem(collection[2])}
-    if (itemRandom == itemColection[3]) {indexOfRandomItem(collection[3])}
-    if (itemRandom == itemColection[4]) {indexOfRandomItem(collection[4])}
-    if (itemRandom == itemColection[5]) {indexOfRandomItem(collection[5])}
-    if (itemRandom == itemColection[6]) {indexOfRandomItem(collection[6])}
-    if (itemRandom == itemColection[7]) {indexOfRandomItem(collection[7])}
+    if (itemRandom === itemColection[0]) {indexOfRandomItem(collection[0])}
+    if (itemRandom === itemColection[1]) {indexOfRandomItem(collection[1])}
+    if (itemRandom === itemColection[2]) {indexOfRandomItem(collection[2])}
+    if (itemRandom === itemColection[3]) {indexOfRandomItem(collection[3])}
+    if (itemRandom === itemColection[4]) {indexOfRandomItem(collection[4])}
+    if (itemRandom === itemColection[5]) {indexOfRandomItem(collection[5])}
+    if (itemRandom === itemColection[6]) {indexOfRandomItem(collection[6])}
+    if (itemRandom === itemColection[7]) {indexOfRandomItem(collection[7])}
   }
 
 
@@ -85,7 +85,6 @@ function App() {
                 indexOfItem={indexOfItem}
               />
             </div>
-            <div id="shows__nation"/>
           </div>
         <button
           className="neutralButton"
