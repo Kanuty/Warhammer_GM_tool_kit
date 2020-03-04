@@ -42,7 +42,7 @@ export const originColection =
   "Under Empire",
   "Norsca",
   "Beastmen",
-  "ChaosDwarfs",
+  "Chaos Dwarfs",
 
   "Empire",
   "Averland",
